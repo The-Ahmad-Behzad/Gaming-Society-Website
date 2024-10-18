@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: var(--pale-sky);
+}
+
+:root {
+  --crimson: #ea1c3c;
+  --primary-light-color: #f04a63;
+  --pale-sky: #647484;
+  --secondary-light-color: #1b1b1b;
+  --text: #fcf4fc;
+  --post-color: #62EEA8;
+  --delete-color: #FF9F9F;
+  --light-color: #FFFEFC;
+  --grey-color: #747E79;
+  --dark-color: #000000;
+  --fb-color: #1877f2;
+  --fb-text-color: #fff;
+  --primary-font: "Montserrat", sans-serif;
+  --seconday-font: "Montserrat", sans-serif;
+  --border-color: #171719;
+  --border-width: 2px;
+  --element-border-radius: 5px;
+  --shark: #1d1d1e;
+  --armour:#fcf4fc;
+  --button-height: 4px;
+  --small-button-height: 2px;
+
+  --element-padding: 0.6em;
+
+  --maximum-width: 400px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body {
+  color: var(--armour);
+  background-color: var(--crimson);
+  font-family: var(--primary-font);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h2, h3 {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card {
+  background-color: transparent;
+  padding: 1.5em;
+  padding-right: 2em;
+  padding-left: 2em;
+  border-radius: var(--element-border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: var(--maximum-width);
+  margin: 2em auto;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.app-title {
+  color: var(--armour);
+  font-family: var(--seconday-font);
+  font-size: 1.8em;
+  text-align: center;
+}
+
+section {
+  margin: 2em 0;
+}
+
+.auth-fields-and-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+input, button, textarea {
+  font-family: inherit;
+  padding: var(--element-padding);
+  height: var(--button-height *2);
+  border-radius: var(--element-border-radius);
+  width: 100%;
+  box-sizing: border-box;
+  aspect-ratio: 22 / 2;
+}
+
+input, button {
+  font-size: 1em;
+  text-align: center;
+  border: var(--border-width) solid var(--dark-color);
+}
+
+input {
+  text-align: left;
+}
+
+input:focus, button:focus textarea:focus {
+  outline: none;
+}
+
+textarea {
+  font-size: 1em;
+  border: 0;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .25);
+  resize: none;
+  height: 6em;
+}
+
+textarea::placeholder {
+  color: var(--pale-sky);
+  opacity: 1;
+}
+
+input {
+  margin: 0.3em;
+  font-weight: 300;
+}
+
+input::placeholder {
+  font-size: small;
+  color: var(--pale-sky);
+  opacity: 1;
+}
+
+button {
+  font-weight: 600;
+  width: 100%;
+  margin: 0.3em;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* .primary-btn {
+  color: #fff;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.primary-btn:hover {
+  top: var(--button-height);
+  box-shadow: none;
+} */
+
+.secondary-btn {
+  padding: 0.3em;
+  background-color: transparent;
+}
+
+.secondary-btn:hover {
+  color: var(--armour);
+  background-color: var(--dark-color);
+}
+
+.forget-btn {
+  color: var(--crimson);
+  text-align: left;
+  border: none;
+  background: none;
+  background-color: transparent;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.horizontal-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.provider-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.provider-g-btn,
+.provider-fb-btn {
+  color: var(--armour);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  border: 0;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .25);
+  padding: 0.5em 1em;
+}
+
+.loginButton {
+  padding: 0.5em 1em;
+  gap: 0.5em;
+  width: 100%;
+  padding: 10px;
+  background-color: #647484;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.loginButton:hover {
+  background-color: #1c9e10;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .25);
+}
+
+
+.provider-fb-btn {
+  color: #fff;
+  background-color: var(--pale-sky);
+}
+
+.provider-g-btn:hover,
+.provider-fb-btn:hover {
+  background-color: #1c9e10;
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .25);
+}
+
+.provider-g-btn-logo,
+.provider-fb-btn-logo {
+  width: 1em;
+  height: auto;
+}

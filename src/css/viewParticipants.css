@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: var(--pale-sky);
+}
+
+:root {
+    --crimson: #ea1c3c;
+    --pale-sky: #647484;
+    --primary-font: "Montserrat", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
+    --border-color: #171719;
+    --border-width: 2px;
+    --element-border-radius: 5px;
+    --shark: #1d1d1e;
+    --armour: #fcf4fc;
+    --button-height: 4px;
+    --small-button-height: 2px;
+    --element-padding: 0.6em;
+    --maximum-width: 400px;
+    --maximum-height: 500px;
+}
+
+/* Container for each notification */
+.notification-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--element-border-radius);
+    padding: 10px;
+    background-color: var(--shark);
+    margin-bottom: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.notification-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notification-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 2px solid var(--pale-sky);
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.title-edit-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Container for buttons */
+.horizontal-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles for buttons */
+.loginButton, .loginButton2 {
+    padding: 0.5em 1em;
+    width: 45%;
+    background-color: #647484;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.loginButton3 {
+    padding: 0.5em 1em;
+    width: auto; /* Adjust width to fit the content */
+    color: #647484;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effects for buttons */
+.loginButton2:hover {
+    background-color: #1c9e10;
+}
+
+.loginButton3:hover {
+    color: #42bb38 !important;
+}
+
+.loginButton:hover {
+    background-color: #e63946;
+}
+
+/* Headings and text styles */
+.cover-heading {
+    color: #fcf4fc; 
+    margin: 10px 0;
+}
+
+.normal-text {
+    color: var(--armour);
+}
+
+/* Section heading style */
+.section-heading {
+    margin-top: 0 !important;
+    text-align: center;
+    color: var(--pale-sky);
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+/* Centering content */
+.center-content {
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Styles for participant details card */
+.participant-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--element-border-radius);
+    background-color: var(--shark);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.participant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.participant-card h3 {
+    color: var(--armour);
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.participant-card p {
+    color: var(--armour);
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Additional styling for details inside participant card */
+.participant-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+.participant-details p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.participant-details p span {
+    font-weight: bold;
+    color: #fcf4fc;
+}
+
+/* Style for the overlay when viewing participant details */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    background-color: var(--shark);
+    padding: 20px;
+    border-radius: var(--element-border-radius);
+    width: 80%;
+    max-width: var(--maximum-width);
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    background-color: var(--crimson);
+    color: white;
+    border: none;
+    border-radius: var(--element-border-radius);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #e63946;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab-button {
+    max-height: 40px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #1c9e10;
+    color: #fff;
+}
+
+.tab-button:hover {
+    background-color: #42bb38;
+    color: #fff;
+}

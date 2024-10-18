@@ -1,0 +1,53 @@
+:root {
+  --armour:#fcf4fc;
+}
+
+.background-video-container {
+  width: 100%;
+  height: 100vh;
+  position: relative; /* Make sure this is set */
+}
+
+video {
+  width: 100%;
+  object-fit: contain;
+  z-index: 1; /* Video stays in the background */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: to make the overlay visible */
+  z-index: 2; /* Below the content, above the video */
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--armour);
+  z-index: 3; /* Ensures content is above the overlay */
+}
+
+
+.content h1, .content h2, .content h4 {
+  color: white;
+}
+
+.content h1 {
+  font-size: 50px;
+}
+.content h2 {
+  font-size: 30px;
+}
+.content h4 {
+  font-size: 20px;
+}

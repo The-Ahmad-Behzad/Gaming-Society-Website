@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: var(--pale-sky);
+}
+
+:root {
+    --crimson: #ea1c3c;
+    --pale-sky: #647484;
+    --primary-font: "Montserrat", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
+    --border-color: #171719;
+    --border-width: 2px;
+    --element-border-radius: 5px;
+    --shark: #1d1d1e;
+    --armour: #fcf4fc;
+    --button-height: 4px;
+    --small-button-height: 2px;
+    --element-padding: 0.6em;
+    --maximum-width: 400px;
+    --maximum-height: 500px;
+}
+
+.notification-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--element-border-radius);
+    padding: 10px;
+    background-color: var(--shark);
+    margin-bottom: 10px;
+}
+
+.notification-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.title-edit-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.horizontal-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.loginButton2, .loginButton {
+    padding: 0.5em 1em;
+    width: 45%;
+    background-color: #647484;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ .loginButton3 {
+    padding: 0.5em 1em;
+    width: 45%; 
+    color: #647484;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.loginButton:hover {
+    background-color: #e63946 !important;
+}
+
+
+.loginButton2:hover {
+    background-color: #1c9e10;
+}
+
+.loginButton3 {
+    width: auto; /* Adjust width to fit the content */
+    padding: 0.5em 1em;
+}
+
+.loginButton3:hover {
+    color: #d10f90;
+}
+
+
+.cover-heading {
+    color: #fcf4fc; 
+    margin: 10px 0;
+}
+
+.normal-text {
+    color: var(--armour);
+}
+
+.section-heading {
+    text-align: center;
+    margin-top: 8em;
+    height: auto;
+    color: var(--pale-sky);
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.center-content {
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
