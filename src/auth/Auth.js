@@ -9,7 +9,7 @@ import { doc, setDoc, getDoc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA-2McLrfovQAgX5p7F0MJ5OQo4a3g8x7E",
+  apiKey: "YOUR_API_KEY",
   authDomain: "fast-gaming-club.firebaseapp.com",
   projectId: "fast-gaming-club",
   storageBucket: "fast-gaming-club.appspot.com",
