@@ -9,7 +9,7 @@ import { doc, setDoc, getDoc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: "YOUR_API_KEY", // ENTER YOUR FIREBASE API KEY HERE
   authDomain: "fast-gaming-club.firebaseapp.com",
   projectId: "fast-gaming-club",
   storageBucket: "fast-gaming-club.appspot.com",
@@ -46,33 +46,6 @@ async function addRole(data) {
       }
         
 }
-
-
-// let userSnap = { email: "", role: "", uid: "" };
-// let displayName = "User";
-// let user = {};
-// let emptyUser = { email: "", displayName: "", uid: "" };
-
-// onAuthStateChanged(auth, async (User) => {
-//   if (User) {
-// //    addRole({uid: User.uid, role:"non-member", email: User.email})
-//     userSnap = await getUser(User.uid); // Wait for the Promise to resolve
-//     user = User;
-//     displayName = User.displayName;
-//     console.log("Hello", userSnap.role, displayName);
-//     console.log("Logged In",user)
-//   } else {
-//     userSnap = await getUser("E7jSd3ibohJYd7wILmde");
-//     displayName = "User";
-//     user = null;
-//     console.log("Logged Out",user)
-//   }
-// });
-
-
-// function isLoggedIn(){
-//   return (user !== null);
-// }
 
 let user = null; // Start with null to indicate no user is logged in initially
 let userSnap = { email: "", role: "", uid: "" };
